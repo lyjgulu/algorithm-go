@@ -1,4 +1,4 @@
-package lc0001
+package algorithm
 
 import (
 	"fmt"
@@ -33,7 +33,7 @@ func TestProblem1(t *testing.T) {
 
 		{
 			para1{[]int{-1, -100, 3, 99}, 2},
-			ans1{[]int{3, 99, -1, -100}},
+			ans1{[]int{0, 2}},
 		},
 
 		{
@@ -44,11 +44,11 @@ func TestProblem1(t *testing.T) {
 		// 如需多个测试，可以复制上方元素。
 	}
 
-	fmt.Printf("------------------------Leetcode Problem 189------------------------\n")
+	fmt.Printf("------------------------Leetcode Problem 1------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans1, q.para1
-		fmt.Printf("【input】:%v       【output】:%v\n", p, twoSum(p.nums, p.target))
+		a, p := q.ans1, q.para1
+		fmt.Printf("【input】:%v       【answer】:%v      【output】:%v\n", p, a, twoSum(p.nums, p.target))
 	}
 	fmt.Printf("\n\n\n")
 }

@@ -1,4 +1,4 @@
-package lc0001
+package algorithm
 
 func twoSum(nums []int, target int) []int {
 	hashMap := map[int]int{}
@@ -6,6 +6,7 @@ func twoSum(nums []int, target int) []int {
 		if p, ok := hashMap[target-val]; ok {
 			return []int{p, index}
 		}
+		hashMap[val] = index
 	}
 	return nil
 }
