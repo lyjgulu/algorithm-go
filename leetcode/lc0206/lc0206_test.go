@@ -2,47 +2,52 @@ package leetcode
 
 import (
 	"fmt"
+	"github.com/lyjgulu/algorithm/structures"
 	"testing"
 )
 
-type question283 struct {
-	para283
-	ans283
+type question206 struct {
+	para206
+	ans206
 }
 
 // para 是参数
 // one 代表第一个参数
-type para283 struct {
-	nums []int
+type para206 struct {
+	one []int
 }
 
 // ans 是答案
 // one 代表第一个答案
-type ans283 struct {
+type ans206 struct {
 	one []int
 }
 
-func TestProblem283(t *testing.T) {
+func Test_Problem206(t *testing.T) {
 
-	qs := []question283{
+	qs := []question206{
+
 		{
-			para283{[]int{0, 1, 0, 3, 12}},
-			ans283{[]int{1, 3, 12, 0, 0}},
+			para206{[]int{1, 2, 3, 4, 5}},
+			ans206{[]int{5, 4, 3, 2, 1}},
 		},
 
 		{
-			para283{[]int{1, 1, 0, 3, 12}},
-			ans283{[]int{1, 1, 3, 12, 0}},
+			para206{[]int{1, 2}},
+			ans206{[]int{2, 1}},
 		},
 
-		// 如需多个测试，可以复制上方元素。
+		{
+			para206{[]int{}},
+			ans206{[]int{}},
+		},
 	}
 
-	fmt.Printf("------------------------Leetcode Problem 283------------------------\n")
+	fmt.Printf("------------------------Leetcode Problem 206------------------------\n")
 
 	for _, q := range qs {
-		a, p := q.ans283, q.para283
-		fmt.Printf("【input】:%v       【answer】:%v      【output】:%v\n", p, a, moveZeroes(p.nums))
+		a, p := q.ans206, q.para206
+		fmt.Printf("【input】:%v       【answer】:%v      【output】:%v\n", p, a, structures.List2Ints(reverseList(structures.Ints2List(p.one))))
+
 	}
-	fmt.Printf("\n\n\n")
 }

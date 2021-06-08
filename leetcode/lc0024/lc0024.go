@@ -11,13 +11,13 @@ type ListNode = structures.ListNode
  *     Next *ListNode
  * }
  */
-func reverseList(head *ListNode) *ListNode {
-	var help *ListNode
-	for head != nil {
-		next := head.Next
-		head.Next = help
-		help = head
-		head = next
+// 递归法
+func swapPairs(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
 	}
+	help := head.Next
+	head.Next = swapPairs(help.Next)
+	help.Next = head
 	return help
 }
