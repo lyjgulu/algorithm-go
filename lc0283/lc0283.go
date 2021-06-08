@@ -7,7 +7,7 @@ func moveZeroes(nums []int) []int {
 	}
 	n1, n2 := 0, 0
 	for n2 < l {
-		if nums[n1] != 0 {
+		if nums[n2] != 0 {
 			nums[n1], nums[n2] = nums[n2], nums[n1]
 			n1++
 		}

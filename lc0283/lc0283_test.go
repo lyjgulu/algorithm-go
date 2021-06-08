@@ -38,11 +38,11 @@ func TestProblem283(t *testing.T) {
 		// 如需多个测试，可以复制上方元素。
 	}
 
-	fmt.Printf("------------------------Leetcode Problem 189------------------------\n")
+	fmt.Printf("------------------------Leetcode Problem 283------------------------\n")
 
 	for _, q := range qs {
-		_, p := q.ans283, q.para283
-		fmt.Printf("【input】:%v       【output】:%v\n", p, moveZeroes(p.nums))
+		a, p := q.ans283, q.para283
+		fmt.Printf("【input】:%v       【answer】:%v      【output】:%v\n", p, a, moveZeroes(p.nums))
 	}
 	fmt.Printf("\n\n\n")
 }
