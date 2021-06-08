@@ -1,4 +1,4 @@
-package algorithm
+package leetcode
 
 import (
 	"fmt"
@@ -42,6 +42,11 @@ func TestProblem15(t *testing.T) {
 
 		{
 			para15{[]int{0}},
+			ans15{[][]int{}},
+		},
+
+		{
+			para15{[]int{0, 5, 2, 4, 6}},
 			ans15{[][]int{}},
 		},
 

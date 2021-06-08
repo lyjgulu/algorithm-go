@@ -1,4 +1,4 @@
-package algorithm
+package leetcode
 
 func twoSum(nums []int, target int) []int {
 	hashMap := map[int]int{}

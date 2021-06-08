@@ -1,4 +1,4 @@
-package algorithm
+package leetcode
 
 func climbStairs(n int) int {
 	p, q, r := 0, 0, 1

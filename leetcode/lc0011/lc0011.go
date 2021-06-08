@@ -1,4 +1,4 @@
-package algorithm
+package leetcode
 
 func maxArea(height []int) int {
 	l := len(height)

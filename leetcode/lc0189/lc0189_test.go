@@ -1,4 +1,4 @@
-package lc0189
+package leetcode
 
 import (
 	"fmt"

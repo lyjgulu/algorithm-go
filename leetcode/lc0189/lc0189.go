@@ -1,4 +1,4 @@
-package lc0189
+package leetcode
 
 func rotate(nums []int, k int) []int {
 	l := len(nums)
