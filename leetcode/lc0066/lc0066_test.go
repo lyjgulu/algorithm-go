@@ -1,0 +1,48 @@
+package leetcode
+
+import (
+	"fmt"
+	"testing"
+)
+
+type question66 struct {
+	para66
+	ans66
+}
+
+// para 是参数
+// one 代表第一个参数
+type para66 struct {
+	nums []int
+}
+
+// ans 是答案
+// one 代表第一个答案
+type ans66 struct {
+	one []int
+}
+
+func TestProblem66(t *testing.T) {
+
+	qs := []question66{
+		{
+			para66{[]int{1, 2, 3}},
+			ans66{[]int{1, 2, 4}},
+		},
+
+		{
+			para66{[]int{9, 9}},
+			ans66{[]int{1, 0, 0}},
+		},
+
+		// 如需多个测试，可以复制上方元素。
+	}
+
+	fmt.Printf("------------------------Leetcode Problem 66------------------------\n")
+
+	for _, q := range qs {
+		a, p := q.ans66, q.para66
+		fmt.Printf("【input】:%v       【answer】:%v      【output】:%v\n", p, a, plusOne(p.nums))
+	}
+	fmt.Printf("\n\n\n")
+}
