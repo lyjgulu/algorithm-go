@@ -39,7 +39,7 @@ func Test_Problem94(t *testing.T) {
 
 		{
 			para94{[]int{1, structures.NULL, 2, 3}},
-			ans94{[]int{1, 2, 3}},
+			ans94{[]int{1, 3, 2}},
 		},
 	}
 
