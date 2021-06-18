@@ -1,6 +1,9 @@
 package leetcode
 
-import "github.com/lyjgulu/algorithm/structures"
+import (
+	"github.com/lyjgulu/algorithm/structures"
+	"math"
+)
 
 // TreeNode define
 type TreeNode = structures.TreeNode
@@ -13,37 +16,16 @@ type TreeNode = structures.TreeNode
  *     Right *TreeNode
  * }
  */
-
-// 递归
-/*
-func inorderTraversal(root *TreeNode) []int {
-    var res []int
-    inorder(root, &res)
-    return res
-}
-
-func inorder(node *TreeNode, output *[]int) {
-    if node != nil {
-        inorder(node.Left, output)
-        *output = append(*output, node.Val)
-        inorder(node.Right, output)
-    }
-}
-*/
-
-// 迭代(自定义栈)
-func inorderTraversal(root *TreeNode) []int {
-	var res []int
-	var stack []*TreeNode
-	for root != nil || len(stack) > 0 {
-		for root != nil {
-			stack = append(stack, root)
-			root = root.Left
+func isValidBST(root *TreeNode) bool {
+	var helper func(root *TreeNode, max int, min int) bool
+	helper = func(root *TreeNode, max, min int) bool {
+		if root == nil {
+			return true
 		}
-		root = stack[len(stack)-1]
-		stack = stack[:len(stack)-1]
-		res = append(res, root.Val)
-		root = root.Right
+		if root.Val <= min || root.Val >= max {
+			return false
+		}
+		return helper(root.Left, root.Val, min) && helper(root.Right, max, root.Val)
 	}
-	return res
+	return helper(root, math.MaxInt64, math.MinInt64)
 }
