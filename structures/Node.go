@@ -7,8 +7,8 @@ type Node struct {
 	Children []*Node
 }
 
-// int2NaryNode 利用 []int 生成 *Node
-func int2NaryNode(nodes []int) *Node {
+// Int2NaryNode 利用 []int 生成 *Node
+func Int2NaryNode(nodes []int) *Node {
 	root := &Node{}
 	if len(nodes) > 1 {
 		root.Val = nodes[0]
