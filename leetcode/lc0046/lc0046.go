@@ -13,38 +13,30 @@ def backtrack(路径, 选择列表):
         撤销选择*/
 func permute(nums []int) [][]int {
 	sort.Ints(nums)
-	// 回溯
 	var res [][]int
-
-	var backTrack func(path []int, start int)
-	backTrack = func(path []int, start int) {
-
-		if len(path) == len(nums) {
-			// 把path添加到res中
-			tmp := make([]int, len(path))
-			copy(tmp, path)
-			res = append(res, tmp)
+	var backtrack func([]int, int)
+	backtrack = func(track []int, first int) {
+		if len(track) == len(nums) {
+			temp := make([]int, len(track))
+			copy(temp, track)
+			res = append(res, temp)
 			return
 		}
-
-		for i := start; i < len(nums); i++ {
-			// 如果当前路径包含相同字母，不添加
+		for i := first; i < len(nums); i++ {
 			flag := false
-			for _, v := range path {
-				if v == nums[i] {
+			for _, val := range track {
+				if val == nums[i] {
 					flag = true
 				}
 			}
 			if flag {
 				continue
 			}
-
-			path = append(path, nums[i])
-			backTrack(path, start)
-			path = path[:len(path)-1]
+			track = append(track, nums[i])
+			backtrack(track, first)
+			track = track[:len(track)-1]
 		}
-
 	}
-	backTrack([]int{}, 0)
+	backtrack([]int{}, 0)
 	return res
 }

@@ -26,18 +26,13 @@ func TestProblem46(t *testing.T) {
 
 	qs := []question46{
 		{
-			para46{[]int{1, 1, 2}},
-			ans46{[][]int{{1, 1, 2}, {1, 2, 1}, {2, 1, 1}}},
-		},
-
-		{
 			para46{[]int{1, 2, 3}},
-			ans46{[][]int{{1, 2, 3}, {1, 3, 2}, {2, 1, 3}, {2, 3, 1}, {3, 1, 2}, {3, 2, 1}}},
+			ans46{[][]int{{}, {1}, {2}, {1, 2}, {1, 3}, {1, 2, 3}}},
 		},
 
 		{
-			para46{[]int{1}},
-			ans46{[][]int{{1}}},
+			para46{[]int{0}},
+			ans46{[][]int{{}, {0}}},
 		},
 
 		// 如需多个测试，可以复制上方元素。
@@ -47,7 +42,7 @@ func TestProblem46(t *testing.T) {
 
 	for _, q := range qs {
 		a, p := q.ans46, q.para46
-		fmt.Printf("【input】:%v       【answer】:%v      【output】:%v\n", p, a, permuteUnique(p.one))
+		fmt.Printf("【input】:%v       【answer】:%v      【output】:%v\n", p, a, subsets(p.one))
 	}
 	fmt.Printf("\n\n\n")
 }
