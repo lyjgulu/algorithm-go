@@ -15,7 +15,6 @@ type TreeNode = structures.TreeNode
  *     Right *TreeNode
  * }
  */
-
 func buildTree(preorder []int, inorder []int) *TreeNode {
 	if len(preorder) == 0 {
 		return nil
