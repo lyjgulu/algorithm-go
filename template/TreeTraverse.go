@@ -15,7 +15,6 @@ type TreeNode = structures.TreeNode
  *     Right *TreeNode
  * }
  */
-
 func TreeTraverse(root *TreeNode) {
 	// 前序遍历
 	TreeTraverse(root.Left)
