@@ -8,6 +8,8 @@ type Node struct {
 
 func MultipleTreeTraverse(node *Node) {
 	for _, child := range node.Children {
+		// 前序遍历需要的操作
 		MultipleTreeTraverse(child)
+		// 后序遍历需要的操作
 	}
 }
