@@ -6,53 +6,58 @@ import (
 	"testing"
 )
 
-type question24 struct {
-	para24
-	ans24
+type question124 struct {
+	para124
+	ans124
 }
 
 // para 是参数
 // one 代表第一个参数
-type para24 struct {
+type para124 struct {
 	one []int
 }
 
 // ans 是答案
 // one 代表第一个答案
-type ans24 struct {
-	one []int
+type ans124 struct {
+	one int
 }
 
-func Test_Problem24(t *testing.T) {
+func Test_Problem124(t *testing.T) {
 
-	qs := []question24{
+	qs := []question124{
 
 		{
-			para24{[]int{1, 2, 3, 4, 5}},
-			ans24{[]int{2, 1, 4, 3, 5}},
+			para124{[]int{-10, 9, 20, 0, 0, 15, 7}},
+			ans124{42},
 		},
 
 		{
-			para24{[]int{1, 2}},
-			ans24{[]int{2, 1}},
+			para124{[]int{1, 2, 3, 4, 5}},
+			ans124{11},
 		},
 
 		{
-			para24{[]int{}},
-			ans24{[]int{}},
+			para124{[]int{1, 2}},
+			ans124{3},
 		},
 
 		{
-			para24{[]int{1}},
-			ans24{[]int{1}},
+			para124{[]int{}},
+			ans124{-2147483648},
+		},
+
+		{
+			para124{[]int{1}},
+			ans124{1},
 		},
 	}
 
-	fmt.Printf("------------------------Leetcode Problem 24------------------------\n")
+	fmt.Printf("------------------------Leetcode Problem 124------------------------\n")
 
 	for _, q := range qs {
-		a, p := q.ans24, q.para24
-		fmt.Printf("【input】:%v       【answer】:%v      【output】:%v\n", p, a, structures.List2Ints(swapPairs(structures.Ints2List(p.one))))
+		a, p := q.ans124, q.para124
+		fmt.Printf("【input】:%v       【answer】:%v      【output】:%v\n", p, a, maxPathSum(structures.Ints2TreeNode(p.one)))
 
 	}
 }
