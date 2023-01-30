@@ -1,11 +1,12 @@
 package leetcode
 
-func twoSum(nums []int, target int) []int {
-	hashTable := map[int]int{}
-	for index, val := range nums {
-		if p, ok := hashTable[target-val]; ok {
-			return []int{p, index}
+func twoSum(num []int, target int) []int {
+	midMap := map[int]int{}
+	for index, value := range num {
+		if v, ok := midMap[target-value]; ok {
+			return []int{v, index}
 		}
+		midMap[value] = index
 	}
 	return nil
 }
