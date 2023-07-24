@@ -12,7 +12,27 @@ func Test_convert(t *testing.T) {
 		args args
 		want string
 	}{
-		// TODO: Add test cases.
+		{name: "1",
+			args: struct {
+				s       string
+				numRows int
+			}{s: "PAYPALISHIRING", numRows: 3},
+			want: "PAHNAPLSIIGYIR",
+		},
+		{name: "2",
+			args: struct {
+				s       string
+				numRows int
+			}{s: "PAYPALISHIRING", numRows: 4},
+			want: "PINALSIGYAHRPI",
+		},
+		{name: "3",
+			args: struct {
+				s       string
+				numRows int
+			}{s: "A", numRows: 1},
+			want: "A",
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

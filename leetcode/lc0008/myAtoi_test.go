@@ -11,7 +11,31 @@ func Test_myAtoi(t *testing.T) {
 		args args
 		want int
 	}{
-		// TODO: Add test cases.
+		{
+			name: "1",
+			args: args{s: "42"},
+			want: 42,
+		},
+		{
+			name: "2",
+			args: args{s: "   -42"},
+			want: -42,
+		},
+		{
+			name: "3",
+			args: args{s: "  4193 with words"},
+			want: 4193,
+		},
+		{
+			name: "4",
+			args: args{s: "  words and 987"},
+			want: 0,
+		},
+		{
+			name: "4",
+			args: args{s: "  -91283472332"},
+			want: -2147483648,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

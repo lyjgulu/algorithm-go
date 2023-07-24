@@ -99,6 +99,27 @@ func maxPalindrome(s string, i, j int, res string) string {
 	return res
 }
 
+func longestPalindrome4(s string) string {
+	res := ""
+	for i := 0; i < len(s); i++ {
+
+	}
+	return res
+}
+
+func maxPalindrome1(s string, i, j int, res string) string {
+	sub := ""
+	for i >= 0 && j < len(s) && s[i] == s[j] {
+		sub = s[i : j+1]
+		i--
+		j++
+	}
+	if len(res) < len(sub) {
+		res = sub
+	}
+	return res
+}
+
 // 解法四 DP，时间复杂度 O(n^2)，空间复杂度 O(n^2)
 func longestPalindrome3(s string) string {
 	res, dp := "", make([][]bool, len(s))
