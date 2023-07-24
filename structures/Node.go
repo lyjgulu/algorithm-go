@@ -1,6 +1,6 @@
 package structures
 
-import "github.com/lyjgulu/algorithm/structures"
+import "github.com/lyjgulu/algorithm-go/structures"
 
 type Node struct {
 	Val      int

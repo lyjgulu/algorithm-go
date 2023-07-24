@@ -2,8 +2,9 @@ package leetcode
 
 import (
 	"fmt"
-	"github.com/lyjgulu/algorithm/structures"
 	"testing"
+
+	"github.com/lyjgulu/algorithm-go/structures"
 )
 
 type question24 struct {

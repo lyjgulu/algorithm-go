@@ -1,7 +1,7 @@
 package leetcode
 
 import (
-	"github.com/lyjgulu/algorithm/structures"
+	"github.com/lyjgulu/algorithm-go/structures"
 )
 
 type ListNode = structures.ListNode

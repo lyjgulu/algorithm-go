@@ -1,6 +1,6 @@
 package template
 
-import "github.com/lyjgulu/algorithm/structures"
+import "github.com/lyjgulu/algorithm-go/structures"
 
 type ListNode = structures.ListNode
 

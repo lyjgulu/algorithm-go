@@ -1,7 +1,7 @@
 package template
 
 import (
-	"github.com/lyjgulu/algorithm/structures"
+	"github.com/lyjgulu/algorithm-go/structures"
 )
 
 // TreeNode define
