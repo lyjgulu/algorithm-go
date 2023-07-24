@@ -20,7 +20,7 @@ func List2Ints(head *ListNode) []int {
 	for head != nil {
 		times++
 		if times > limit {
-			msg := fmt.Sprintf("链条深度超过%d，可能出现环状链条。请检查错误，或者放宽 l2s 函数中 limit 的限制。", limit)
+			msg := fmt.Sprintf("链条深度超过%d，可能出现环状链条。请检查错误，或者放宽函数中 limit 的限制。", limit)
 			panic(msg)
 		}
 

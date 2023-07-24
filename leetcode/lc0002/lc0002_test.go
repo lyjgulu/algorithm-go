@@ -1,7 +1,7 @@
 package leetcode
 
 import (
-	"algorithm/structures"
+	"algorithm-go/structures"
 	"reflect"
 	"testing"
 )
