@@ -1,4 +1,4 @@
-module algorithm-go
+module algorithm
 
 go 1.19
 
